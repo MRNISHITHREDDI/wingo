@@ -16,8 +16,8 @@ driver = webdriver.Chrome('path/to/chromedriver')  # Update with your ChromeDriv
 # Fetch Current Period ID
 def get_current_period_id():
     driver.get("https://tc9987.win/")
-    driver.find_element(By.ID, "username").send_keys(credentials["16082023021"])
-    driver.find_element(By.ID, "password").send_keys(credentials["021021"])
+    driver.find_element(By.ID, "username").send_keys(credentials["username"])
+    driver.find_element(By.ID, "password").send_keys(credentials["password"])
     driver.find_element(By.ID, "login-button").click()
     time.sleep(5)  # Wait for login to complete
 
@@ -86,7 +86,7 @@ MAINTAIN FUND UPTO LEVEL 8"""
 
 # Main function
 def main():
-    TOKEN = credentials['6288837444:AAFy0htn41tqZ_pqpOA6mrzeqCPX3bLjxtI']
+    TOKEN = credentials['']
     updater = Updater(TOKEN)
     dispatcher = updater.dispatcher
 
