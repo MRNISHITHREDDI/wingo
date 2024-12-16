@@ -16,8 +16,8 @@ driver = webdriver.Chrome('path/to/chromedriver')  # Update with your ChromeDriv
 # Fetch Current Period ID
 def get_current_period_id():
     driver.get("https://tc9987.win/")
-    driver.find_element(By.ID, "username").send_keys(credentials["username"])
-    driver.find_element(By.ID, "password").send_keys(credentials["password"])
+    driver.find_element(By.ID, "username").send_keys(credentials["16082023021"])
+    driver.find_element(By.ID, "password").send_keys(credentials["021021"])
     driver.find_element(By.ID, "login-button").click()
     time.sleep(5)  # Wait for login to complete
 
@@ -46,7 +46,9 @@ def start(update: Update, context: CallbackContext):
             # Check if we need to skip 2 minutes due to losses
             if loss_streak >= 3:
                 context.bot.send_message(chat_id=update.effective_chat.id,
-                                         text="3 losses in a row detected. Skipping 2 minutes...")
+                                         text="Chart not stable 🥹 
+
+Wait for 2 minutes 🤩")
                 time.sleep(120)  # Skip 2 minutes
                 loss_streak = 0  # Reset loss streak after skip
 
@@ -84,7 +86,7 @@ MAINTAIN FUND UPTO LEVEL 8"""
 
 # Main function
 def main():
-    TOKEN = credentials['telegram_bot_token']
+    TOKEN = credentials['6288837444:AAFy0htn41tqZ_pqpOA6mrzeqCPX3bLjxtI']
     updater = Updater(TOKEN)
     dispatcher = updater.dispatcher
 
