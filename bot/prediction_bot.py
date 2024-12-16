@@ -86,7 +86,7 @@ MAINTAIN FUND UPTO LEVEL 8"""
 
 # Main function
 def main():
-    TOKEN = credentials['']
+    TOKEN = credentials['telegram_bot_token']
     updater = Updater(TOKEN)
     dispatcher = updater.dispatcher
 
