@@ -46,9 +46,7 @@ def start(update: Update, context: CallbackContext):
             # Check if we need to skip 2 minutes due to losses
             if loss_streak >= 3:
                 context.bot.send_message(chat_id=update.effective_chat.id,
-                                         text="Chart not stable 🥹 
-
-Wait for 2 minutes 🤩")
+                                         text="Chart not stable 🥹Wait for 2 minutes 🤩")
                 time.sleep(120)  # Skip 2 minutes
                 loss_streak = 0  # Reset loss streak after skip
 
